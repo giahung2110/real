@@ -1,0 +1,84 @@
+<!-- Clone by @WusThanhDieu -->
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kỷ yếu lớp 9C - THCS Nguyễn Tất Thành</title>
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/css/app.css" />
+  </head>
+  <body class="font-sans antialiased">
+    <div
+      id="app"
+      data-page='{
+        "component": "views/home",
+        "props": {
+          "errors": {},
+          "name": "Github WusThanhDieu",
+          "quote": {
+            "message": "",
+            "author": ""
+          },
+          "auth": {
+            "user": null
+          },
+          "ziggy": {
+            "port": null,
+            "defaults": [],
+            "routes": {
+              "home": { "uri": "/", "methods": ["GET", "HEAD"] },
+              "show-create-form": { "uri": "create-message/{id?}", "methods": ["GET", "HEAD"], "parameters": ["id"] },
+              "create-form": { "uri": "create-message", "methods": ["POST"] },
+              "login": { "uri": "login", "methods": ["GET", "HEAD"] },
+              "logout": { "uri": "logout", "methods": ["POST"] },
+              "storage.local": {
+                "uri": "storage/{path}", "methods": ["GET", "HEAD"],
+                "wheres": { "path": ".*" }, "parameters": ["path"]
+              }
+            },
+            "location": ""
+          },
+          "message": "",
+          "client": {
+            "fontName": "Mali",
+            "color": "#ff0019",
+            "messages": [
+              "Đỗ NV1 hết nhé!!!",
+              "cảm ơn đã xuất hiện trong thanh xuân của tôiiii",
+              "thành công trên con đường mới nha!!",
+              "cảm ơn mọi người rất nhiềuuuuuu",
+              "đừng có quên bọn t nha",
+              "Chào mừng đến với kỷ yếu lớp 9C - THCS Nguyễn Tất Thành"
+            ],
+            "music": "//thanhdieu.com/music.mp3"
+          },
+          "clientId": "/"
+        },
+        "url": "/",
+        "version": "",
+        "clearHistory": false,
+        "encryptHistory": false
+      }'
+    ></div>
+
+    <!-- Ảnh lớp 9C -->
+    <div class="flex justify-center my-6">
+      <img src="/images/class9c.jpg" alt="Ảnh lớp 9C" class="rounded-2xl shadow-lg max-w-full w-[600px]">
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 text-sm opacity-70">
+      <p>
+        © <span id="year"></span> <a href="/">From GiaHung ❤️</a>. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+
+    <script type="module" src="/static/js/app.js"></script>
+    <script type="module" src="/static/js/home.js"></script>
+  </body>
+</html>
